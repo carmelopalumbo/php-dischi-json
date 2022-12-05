@@ -8,6 +8,7 @@ createApp({
             disks: [],
             details: [],
             showDetails: false,
+            //dati per aggiungdre nuovo album
             newTitle: '',
             newAuthor: '',
             newYear: '',
@@ -16,13 +17,16 @@ createApp({
         }
     },
     methods: {
+
+        //metodo per stampare al mounted
         getDisks(){
             axios.get(this.apiUrl)
             .then(result => {
                 this.disks = result.data;
             })
         },
-
+        
+        //restituisce dettagli disco al click della card
         getDetails(index){
             this.showDetails = true;
             axios.get(this.apiUrl, {params: {
@@ -33,6 +37,7 @@ createApp({
             })
         },
 
+        //aggiunge nuovo album prendendo dati da un form all interno di un modal
         addNewAlbum(){
             const data = {
                 name: this.newTitle,
@@ -55,6 +60,7 @@ createApp({
             })
         },
 
+        //elimina album dopo conferma in base all indice passato come parametro
         deleteAlbum(index){
             if(confirm('Sei sicuro di voler eliminare questo album dalla tua libreria?')){
                 const data = {

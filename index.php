@@ -40,10 +40,10 @@
                         <h1>JSON DISKS</h1>
                     </div>
                     <div class="col text-end">
-                        <!-- Button trigger modal -->
+                        <!-- bottone per attivare il modal -->
                         <i class="fa-solid fa-plus" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
 
-                        <!-- Modal -->
+                        <!-- modal con form dati per nuobo album -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">

@@ -1,12 +1,13 @@
 <?php
 
+//primo set db dischi
 $string = file_get_contents('db.json');
 
 $disklist = json_decode($string, true);
 
 
 
-
+//restituisce descrizione dettagliata disco
 if (isset($_GET['descr'])) {
     $disklist = [
         "genre" => $disklist[$_GET["descr"]]["genre"],
@@ -17,6 +18,7 @@ if (isset($_GET['descr'])) {
     ];
 }
 
+//aggiunge nuovo disco se sono presenti tutti i campi richiesti
 if (isset($_POST['name']) && isset($_POST['genre']) && isset($_POST['author']) && isset($_POST['year']) && isset($_POST['poster'])) {
     $newAlbum = [
         "title" => $_POST["name"],
@@ -30,10 +32,14 @@ if (isset($_POST['name']) && isset($_POST['genre']) && isset($_POST['author']) &
     file_put_contents("db.json", json_encode($disklist));
 }
 
+//elimina disco selezionato
 if (isset($_POST['indexAlbum'])) {
     array_splice($disklist, $_POST['indexAlbum'], 1);
 
     file_put_contents('db.json', json_encode($disklist));
 }
+
+
+//stampa json del array
 header('Content-Type: application/json');
 echo json_encode($disklist);
