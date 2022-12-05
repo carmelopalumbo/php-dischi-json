@@ -63,7 +63,7 @@
                         <p>{{details.year}}</p>
                         <p class="fw-light">Genre: {{details.genre}}</p>
                     </div>
-                    <div class="position-absolute close-button" @click.stop="closeDetails()">
+                    <div class="position-absolute close-button" @click.stop="showDetails = !showDetails">
                         <i class="fa-solid fa-xmark"></i>
                     </div>
                 </div>

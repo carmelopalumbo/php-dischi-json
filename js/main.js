@@ -29,10 +29,6 @@ createApp({
                 this.details = results.data;
             })
         },
-
-        closeDetails(){
-            this.showDetails = false;
-        }
     },
     mounted(){
         this.getDisks();
