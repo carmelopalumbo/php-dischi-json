@@ -9,6 +9,11 @@
     <!-- boostrap -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css' integrity='sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==' crossorigin='anonymous' />
 
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
 
@@ -34,9 +39,17 @@
         </header>
 
         <main>
-            <div class="container">
-                <div class="row">
+            <div class="container pt-4">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-4 d-flex justify-content-center text-center my-4" v-for="(disk, index) in disks">
+                        <div class="disk-card text-white">
+                            <img :src="disk.poster" :alt="disk.title">
+                            <h5 class="py-3">{{disk.title}}</h5>
+                            <p class="fw-light">{{disk.author}}</p>
+                            <p>{{disk.year}}</p>
+                        </div>
 
+                    </div>
                 </div>
             </div>
         </main>
