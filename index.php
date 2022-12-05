@@ -22,7 +22,23 @@
 </head>
 
 <body>
+    <header>
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="row text-white">
+                <div class="col">
+                    <h1>JSON DISKS</h1>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <main>
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+    </main>
 </body>
 
 <script src="./js/main.js"></script>
