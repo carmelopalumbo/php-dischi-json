@@ -26,16 +26,48 @@
     <!-- VueJs -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
     <title>Dischi JSON</title>
 </head>
 
 <body>
     <div id="app">
         <header>
-            <div class="container h-100 d-flex align-items-center justify-content-center">
-                <div class="row text-white">
+            <div class="container h-100 d-flex align-items-center w-100">
+                <div class="row text-white d-flex justify-content-between w-100">
                     <div class="col">
                         <h1>JSON DISKS</h1>
+                    </div>
+                    <div class="col text-end">
+                        <!-- Button trigger modal -->
+                        <i class="fa-solid fa-plus" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Album.</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex justify-content-center w-100">
+                                        <form action="">
+                                            <input type="text" class="form-control my-4" id="title" placeholder="Titolo:">
+                                            <input type="text" class="form-control my-4" id="author" placeholder="Autore:">
+                                            <input type="text" class="form-control my-4" id="year" placeholder="Anno di uscita:">
+                                            <input type="text" class="form-control my-4" id="genre" placeholder="Genere:">
+                                            <input type="text" class="form-control my-4" id="poster" placeholder="Poster (URL):">
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                                        <button type="button" class="btn btn-primary">AGGIUNGI</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

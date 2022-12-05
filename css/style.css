@@ -7,6 +7,20 @@ header{
     background-color: #0a233a;
 }
 
+header i{
+    font-size: 2rem;
+    padding: 7px 10px;
+    color: white;
+    cursor: pointer;
+    transition: .3s all;
+    border: 2px solid white;
+}
+
+header i:hover{
+    color: #25415e;
+    border: 2px solid #25415e;
+}
+
 main{
     background-color: #25415e;
 }
