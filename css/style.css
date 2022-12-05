@@ -14,11 +14,48 @@ main{
 .disk-card{
     width: 250px;
     background-color: #0a233aa8;
-    padding: 20px;
+    padding: 60px 0;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .disk-card img{
     height: 200px;
     width: 200px;
+}
+
+.cards-box{
+    position: relative;
+}
+
+.details-box{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0a233af0;;
+}
+
+.details-box img{
+    width: 400px;
+    height: 400px;
+}
+
+.close-button{
+    top: 0;
+    right: 0;
+}
+
+.close-button i{
+    margin: 10px;
+    font-size: 2rem;
+    color: white;
+    padding: 8px;
+    border: 1px solid white;
+    cursor: pointer;
 }
