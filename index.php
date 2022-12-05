@@ -48,21 +48,19 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add New Album.</h1>
+                                        <h1 class="modal-title fs-5 text-black m-auto">AGGIUNGI UN NUOVO ALBUM</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <div class="modal-body d-flex justify-content-center w-100">
-                                        <form action="">
-                                            <input type="text" class="form-control my-4" id="title" placeholder="Titolo:">
-                                            <input type="text" class="form-control my-4" id="author" placeholder="Autore:">
-                                            <input type="text" class="form-control my-4" id="year" placeholder="Anno di uscita:">
-                                            <input type="text" class="form-control my-4" id="genre" placeholder="Genere:">
-                                            <input type="text" class="form-control my-4" id="poster" placeholder="Poster (URL):">
-                                        </form>
+                                    <div class="modal-body w-75 m-auto">
+                                        <input type="text" class="form-control my-4" id="title" placeholder="Titolo:" v-model.trim="newTitle">
+                                        <input type="text" class="form-control my-4" id="author" placeholder="Autore:" v-model.trim="newAuthor">
+                                        <input type="text" class="form-control my-4" id="year" placeholder="Anno di uscita:" v-model.trim="newYear">
+                                        <input type="text" class="form-control my-4" id="genre" placeholder="Genere:" v-model.trim="newGenre">
+                                        <input type="text" class="form-control my-4" id="poster" placeholder="Poster (URL):" v-model.trim="newPoster">
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
-                                        <button type="button" class="btn btn-primary">AGGIUNGI</button>
+                                        <button type="button" class="btn btn-primary" @click.stop="addNewAlbum()" data-bs-dismiss="modal">AGGIUNGI</button>
                                     </div>
                                 </div>
                             </div>
@@ -82,6 +80,9 @@
                             <h5 class="py-3">{{disk.title}}</h5>
                             <p class="fw-light">{{disk.author}}</p>
                             <p>{{disk.year}}</p>
+                            <div class="delete">
+                                <i class="fa-solid fa-trash" @click.stop="deleteAlbum(index)"></i>
+                            </div>
                         </div>
 
                     </div>
