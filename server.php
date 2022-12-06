@@ -19,7 +19,7 @@ if (isset($_GET['descr'])) {
 }
 
 //aggiunge nuovo disco se sono presenti tutti i campi richiesti
-if (isset($_POST['name']) && isset($_POST['genre']) && isset($_POST['author']) && isset($_POST['year']) && isset($_POST['poster'])) {
+if (!empty($_POST['name']) && !empty($_POST['genre']) && !empty($_POST['author']) && !empty($_POST['year']) && !empty($_POST['poster'])) {
     $newAlbum = [
         "title" => $_POST["name"],
         "author" => $_POST["author"],

@@ -46,7 +46,7 @@ createApp({
                 year: this.newYear,
                 poster: this.newPoster
             }
-
+            
             axios.post(this.apiUrl, data, {
                 headers: {'Content-Type' : 'multipart/form-data'}
             })
